@@ -1,0 +1,101 @@
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$site-width: 1000px;
+$baseline: 3rem;
+
+:root {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+#app {
+  background: #eee;
+  margin: 0;
+  height: 220vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Fira Sans", sans-serif;
+  max-width: 100%;
+
+  main {
+    background: blue;
+    margin: 0 auto;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+
+    section.trending {
+      background: yellow;
+      flex: 1;
+
+      header {
+        background: red;
+        position: absolute;
+        width: 100%;
+
+        section {
+          background: grey;
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          height: 60px;
+
+          div.input {
+            background: lawngreen;
+            flex: 1;
+          }
+          aside.cart {
+            background: purple;
+            flex: 1;
+          }
+          aside.profile {
+            background: wheat;
+            flex: 1;
+          }
+        }
+
+        nav {
+          background: green;
+          position: absolute;
+
+          ul {
+            background: darkblue;
+
+            li {
+              background: yellowgreen;
+            }
+          }
+        }
+      }
+    }
+    section.tops {
+      background: brown;
+      flex: 1;
+
+      section.kategories {
+        background: pink;
+      }
+    }
+    section.shoes {
+      background: rgb(213, 191, 69);
+      flex: 1;
+
+      section.kategories {
+        background: pink;
+      }
+    }
+  }
+  section.footer{
+    height: 20vh;
+    background: lawngreen;
+  }
+}
