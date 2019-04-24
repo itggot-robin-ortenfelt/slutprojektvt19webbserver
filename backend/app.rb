@@ -18,7 +18,7 @@ get('/')do
 content_type :json
 db = SQLite3::Database.new('database/database.db')
 db.results_as_hash = true 
-result = db.execute("SELECT * FROM users")
+result = db.execute("SELECT * FROM clothing")
 return result.to_json
     
 end

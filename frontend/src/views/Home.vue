@@ -2,24 +2,29 @@
   <div id="app">
     <main>
       <section class="trending">
+        <div class="shoes"> 
+          <img src="../assets/shoesBackground.jpg">
+        </div>
+        <div class="hoodie">
+          <img  src="../assets/hoodieBackground.jpg">
+        </div>
+
         <header>
           <section>
             <div class="input">
               <input type="text">
             </div>
             <aside class="cart">
-              <!-- <img src="@/assets/cart.svg" @click="views.cart = !views.cart" />
-              <div class="badge">{{ cart.length }}</div>
-              <cart :cart="cart" v-if="views.cart"></cart>-->
+              <img src="@/assets/cart.png" alt="Shopping cart">
             </aside>
             <aside class="profile">
-              <img src="@/assets/profile.png" alt>
+              <img src="@/assets/profile.png" alt="Profile">
             </aside>
           </section>
           <nav>
             <ul>
               <li>
-                <a href>New</a>
+                <a href><p>New</p></a>
               </li>
               <li>
                 <a href>Brands</a>
@@ -30,26 +35,19 @@
               <li>
                 <a href>Settings</a>
               </li>
-              <li>
-                <router-link tag="li" to="/hoodies">
-                  <a>/foo</a>
-                </router-link>
-              </li>
-              <li>
-                <router-link tag="li" to="/about">
-                  <a>/foo</a>
-                </router-link>
-              </li>
             </ul>
           </nav>
         </header>
-        <img src alt="GUL">
       </section>
       <section class="tops">
         <div>
           <h2>TOPS</h2>
         </div>
         <section class="kategories">
+          
+          <router-link tag="li" to="/hoodies">
+            <a>/foo</a>
+          </router-link>
           <a href="#">
             <img src alt="BILD">
           </a>

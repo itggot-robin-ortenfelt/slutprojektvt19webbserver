@@ -24,7 +24,7 @@
     <main>
       <section class="hero"></section>
       <section class="products">
-        <div v-for="item in products" v-bind:key="item.user-id" ><h1>{{item.password}}</h1></div>
+        <div v-for="item in products" v-bind:key="item.clothingId" > <img  v-bind:src="item.clothingImg" :alt="item.color"></div> <!-- huuuuuur -->
       </section>
 
       <footer>footer</footer>
@@ -45,7 +45,6 @@ export default {
     async getClothing() {
       let res = await this.$http.get("http://localhost:4567");
       this.products = res.data;
-      console.log("hej")
     }
   },
   mounted: function() {

@@ -34,44 +34,104 @@ body {
     flex-direction: column;
 
     section.trending {
-      background: yellow;
-      flex: 1;
-
-      header {
-        background: red;
+      height: 100vh;
+      // background-image: url("../src/assets/profile.png");
+      div.shoes {
+        width: 50vw;
+        height: inherit;
         position: absolute;
-        width: 100%;
 
-        section {
-          background: grey;
-          display: flex;
-          flex-direction: row;
-          margin: 0;
-          height: 60px;
-
-          div.input {
-            background: lawngreen;
-            flex: 1;
-          }
-          aside.cart {
-            background: purple;
-            flex: 1;
-          }
-          aside.profile {
-            background: wheat;
-            flex: 1;
-          }
+        div.shoes {
+          background: red;
+          display: inline-block;
+          height: 55px;
+          margin-left: 20px;
+          margin-top: 55px;
+          position: relative;
+          width: 100px;
+        }
+        div.shoes:before {
+          border-bottom: 35px solid red;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          content: "";
+          height: 0;
+          left: 0;
+          position: absolute;
+          top: -35px;
+          width: 0;
         }
 
-        nav {
-          background: green;
+        //   img {
+        //     object-fit: cover;
+        //     height: 100%;
+        //     width: 100%;
+        //   }
+        // }
+        // div.hoodie {
+        //   width: 50vw;
+        //   position: absolute;
+        //   right: 0px;
+
+        //   img {
+        //     object-fit: cover;
+        //     height: 100vh;
+        //     width: 100%;
+        //   }
+        // }
+
+        header {
           position: absolute;
+          width: 100%;
 
-          ul {
-            background: darkblue;
+          section {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            height: 60px;
 
-            li {
-              background: yellowgreen;
+            div.input {
+              flex: 5;
+              @extend %center;
+
+              input {
+                font-size: 1.5rem;
+              }
+            }
+            aside.cart {
+              flex: 0.5;
+
+              img {
+                max-height: 100%;
+                float: right;
+              }
+            }
+            aside.profile {
+              flex: 0.5;
+
+              img {
+                max-height: 100%;
+                float: right;
+              }
+            }
+          }
+
+          nav {
+            position: absolute;
+            height: inherit;
+
+            ul {
+              list-style: none;
+              margin-top: 10vh;
+
+              li {
+                line-height: 50px;
+
+                a:link {
+                  text-decoration: none;
+                  font-size: 1.3rem;
+                }
+              }
             }
           }
         }
@@ -94,7 +154,7 @@ body {
       }
     }
   }
-  section.footer{
+  section.footer {
     height: 20vh;
     background: lawngreen;
   }
