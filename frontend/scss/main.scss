@@ -132,10 +132,11 @@ body {
     }
   }
 
-  section.tops {
+  section.cloths {
     background: brown;
     flex: 1;
     padding: 0 10vw;
+    position: relative;
 
     div {
       @extend %center;

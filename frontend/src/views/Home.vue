@@ -40,7 +40,7 @@
         </header>
       </section>
       
-      <section class="tops">
+      <section class="cloths">
         <div>
           <h2>TOPS</h2>
         </div>
@@ -59,32 +59,32 @@
             <div> jacket</div>
           </a>
           <a href="#">
-            <div class="thicc"> sweatshitt</div>
+            <div class="thicc"> sweatshirt</div>
           </a>
           <a href="#">
             <div class="thicc">  tanktop</div>
           </a>
         </section>
-      </section>
-      <section class="shoes">
+      
+      
         <div>
           <h2>SHOES</h2>
         </div>
         <section class="kategories">
-          <a href="#">
-            <img src alt="BILD">
+         <a href="#">
+            <div> tshirt</div>
           </a>
           <a href="#">
-            <img src alt="BILD1">
+            <div> hoodie</div>
           </a>
           <a href="#">
-            <img src alt="BILD2">
+            <div> jacket</div>
           </a>
           <a href="#">
-            <img src alt="BILD3">
+            <div class="thicc"> sweatshirt</div>
           </a>
           <a href="#">
-            <img src alt="BILD4">
+            <div class="thicc">  tanktop</div>
           </a>
         </section>
       </section>
