@@ -24,7 +24,9 @@
     <main>
       <section class="hero"></section>
       <section class="products">
-        <div v-for="item in products" v-bind:key="item.clothingId" > <img  v-bind:src="item.clothingImg" :alt="item.color"></div> <!-- huuuuuur -->
+        <div v-for="item in products" v-bind:key="item.clothingId" > 
+          <img src="@/assets/products/hoodie-blue.jpg"></img>  
+        </div> <!-- huuuuuur -->
       </section>
 
       <footer>footer</footer>
@@ -43,7 +45,7 @@ export default {
   },
   methods: {
     async getClothing() {
-      let res = await this.$http.get("http://localhost:4567");
+      let res = await this.$http.get("/api/clothing");
       this.products = res.data;
     }
   },

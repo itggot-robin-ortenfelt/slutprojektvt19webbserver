@@ -39,29 +39,30 @@
           </nav>
         </header>
       </section>
+      
       <section class="tops">
         <div>
           <h2>TOPS</h2>
         </div>
         <section class="kategories">
           
-          <router-link tag="li" to="/hoodies">
+          <!-- <router-link tag="li" to="/hoodies">
             <a>/foo</a>
-          </router-link>
+          </router-link> -->
           <a href="#">
-            <img src alt="BILD">
+            <div> tshirt</div>
           </a>
           <a href="#">
-            <img src alt="BILD1">
+            <div> hoodie</div>
           </a>
           <a href="#">
-            <img src alt="BILD2">
+            <div> jacket</div>
           </a>
           <a href="#">
-            <img src alt="BILD3">
+            <div class="thicc"> sweatshitt</div>
           </a>
           <a href="#">
-            <img src alt="BILD4">
+            <div class="thicc">  tanktop</div>
           </a>
         </section>
       </section>

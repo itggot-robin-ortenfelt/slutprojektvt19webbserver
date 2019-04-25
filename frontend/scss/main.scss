@@ -33,6 +33,20 @@ body {
     display: flex;
     flex-direction: column;
 
+    section.products {
+      height: 100vh;
+
+      div {
+        height: inherit;
+
+        div.box {
+          height: 100px;
+          width: 100px;
+          background: red;
+        }
+      }
+    }
+
     section.trending {
       height: 100vh;
       // background-image: url("../src/assets/profile.png");
@@ -41,121 +55,127 @@ body {
         height: inherit;
         position: absolute;
 
-        div.shoes {
-          background: red;
-          display: inline-block;
-          height: 55px;
-          margin-left: 20px;
-          margin-top: 55px;
-          position: relative;
-          width: 100px;
-        }
-        div.shoes:before {
-          border-bottom: 35px solid red;
-          border-left: 50px solid transparent;
-          border-right: 50px solid transparent;
-          content: "";
-          height: 0;
-          left: 0;
-          position: absolute;
-          top: -35px;
-          width: 0;
-        }
-
-        //   img {
-        //     object-fit: cover;
-        //     height: 100%;
-        //     width: 100%;
-        //   }
-        // }
-        // div.hoodie {
-        //   width: 50vw;
-        //   position: absolute;
-        //   right: 0px;
-
-        //   img {
-        //     object-fit: cover;
-        //     height: 100vh;
-        //     width: 100%;
-        //   }
-        // }
-
-        header {
-          position: absolute;
+        img {
+          object-fit: cover;
+          height: 100%;
           width: 100%;
+        }
+      }
 
-          section {
-            display: flex;
-            flex-direction: row;
-            margin: 0;
-            height: 60px;
+      div.hoodie {
+        width: 50vw;
+        position: absolute;
+        right: 0px;
 
-            div.input {
-              flex: 5;
-              @extend %center;
+        img {
+          object-fit: cover;
+          height: 100vh;
+          width: 100%;
+        }
+      }
 
-              input {
-                font-size: 1.5rem;
-              }
-            }
-            aside.cart {
-              flex: 0.5;
+      header {
+        position: absolute;
+        width: 100%;
 
-              img {
-                max-height: 100%;
-                float: right;
-              }
-            }
-            aside.profile {
-              flex: 0.5;
+        section {
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          height: 60px;
 
-              img {
-                max-height: 100%;
-                float: right;
-              }
+          div.input {
+            flex: 5;
+            @extend %center;
+
+            input {
+              font-size: 1.5rem;
             }
           }
+          aside.cart {
+            flex: 0.5;
 
-          nav {
-            position: absolute;
-            height: inherit;
+            img {
+              max-height: 100%;
+              float: right;
+            }
+          }
+          aside.profile {
+            flex: 0.5;
 
-            ul {
-              list-style: none;
-              margin-top: 10vh;
+            img {
+              max-height: 100%;
+              float: right;
+            }
+          }
+        }
 
-              li {
-                line-height: 50px;
+        nav {
+          position: absolute;
+          height: inherit;
 
-                a:link {
-                  text-decoration: none;
-                  font-size: 1.3rem;
-                }
+          ul {
+            list-style: none;
+            margin-top: 10vh;
+
+            li {
+              line-height: 50px;
+
+              a:link {
+                text-decoration: none;
+                font-size: 1.3rem;
               }
             }
           }
         }
       }
     }
-    section.tops {
-      background: brown;
-      flex: 1;
+  }
 
-      section.kategories {
-        background: pink;
-      }
+  section.tops {
+    background: brown;
+    flex: 1;
+    padding: 0 10vw;
+
+    div {
+      @extend %center;
+      background-color: rgba(191, 111, 111, 0.694);
+      margin: 10px;
     }
-    section.shoes {
-      background: rgb(213, 191, 69);
-      flex: 1;
 
-      section.kategories {
-        background: pink;
+    section.kategories {
+      background: pink;
+      height: inherit;
+      display: flex;
+      padding: 0 10vw;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      justify-content: center;
+
+      a {
+
+        div {
+          height: 250px;
+          width: 200px;
+        }
+
+        div.thicc{
+          width: 310px;
+        }
       }
     }
   }
-  section.footer {
-    height: 20vh;
-    background: lawngreen;
+  section.shoes {
+    background: rgb(213, 191, 69);
+    flex: 1;
+
+    section.kategories {
+      background: pink;
+    }
   }
+}
+section.footer {
+  height: 20vh;
+  background: lawngreen;
 }
