@@ -1,12 +1,13 @@
 <template>
-  <div id="app">
+  <div>
+    <inlogg v-if="showLogin" />
     <main>
       <section class="trending">
-        <div class="shoes"> 
+        <div class="shoes">
           <img src="../assets/shoesBackground.jpg">
         </div>
         <div class="hoodie">
-          <img  src="../assets/hoodieBackground.jpg">
+          <img src="../assets/hoodieBackground.jpg">
         </div>
 
         <header>
@@ -17,14 +18,16 @@
             <aside class="cart">
               <img src="@/assets/cart.png" alt="Shopping cart">
             </aside>
-            <aside class="profile">
+            <aside class="profile" @click="showLogin = !showLogin">
               <img src="@/assets/profile.png" alt="Profile">
             </aside>
           </section>
           <nav>
             <ul>
               <li>
-                <a href><p>New</p></a>
+                <a href>
+                  <p>New</p>
+                </a>
               </li>
               <li>
                 <a href>Brands</a>
@@ -39,52 +42,55 @@
           </nav>
         </header>
       </section>
-      
+
       <section class="cloths">
         <div>
           <h2>TOPS</h2>
         </div>
         <section class="kategories">
-          
-          <!-- <router-link tag="li" to="/hoodies">
-            <a>/foo</a>
-          </router-link> -->
+          <div>
+            <router-link tag="li" to="/tShirts">
+              <a>LINK</a>
+            </router-link>
+          </div>
+
+          <div>
+            <router-link tag="li" to="/hoodies">
+              <a>/foo</a>
+            </router-link>
+          </div>
+
           <a href="#">
-            <div> tshirt</div>
+            <div>jacket</div>
           </a>
+
           <a href="#">
-            <div> hoodie</div>
+            <div class="thicc">sweatshirt</div>
           </a>
+
           <a href="#">
-            <div> jacket</div>
-          </a>
-          <a href="#">
-            <div class="thicc"> sweatshirt</div>
-          </a>
-          <a href="#">
-            <div class="thicc">  tanktop</div>
+            <div class="thicc">tanktop</div>
           </a>
         </section>
-      
-      
+
         <div>
           <h2>SHOES</h2>
         </div>
         <section class="kategories">
-         <a href="#">
-            <div> tshirt</div>
+          <a href="#">
+            <div>tshirt</div>
           </a>
           <a href="#">
-            <div> hoodie</div>
+            <div>hoodie</div>
           </a>
           <a href="#">
-            <div> jacket</div>
+            <div>jacket</div>
           </a>
           <a href="#">
-            <div class="thicc"> sweatshirt</div>
+            <div class="thicc">sweatshirt</div>
           </a>
           <a href="#">
-            <div class="thicc">  tanktop</div>
+            <div class="thicc">tanktop</div>
           </a>
         </section>
       </section>
@@ -94,21 +100,19 @@
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
-// import products from './assets/products';
-// import Item from '@/components/items';
+import inlogg from '@/components/inlogg.vue'
 
-// export default {
-//   name: "app",
-//   components: {
-//     Item
-//   },
-//   data(){
-//     return{
-//       products: products
-//     }
-//   }
-// };
+export default {
+  name: "app",
+  components: {
+    inlogg
+  },
+  data(){
+    return {
+      showLogin: false
+    }
+  }
+};
 </script>
 
 <style lang="scss">

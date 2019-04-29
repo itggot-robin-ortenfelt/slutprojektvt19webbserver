@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div>
     <header>
       <section class="center">
-        <h1>Sneaky Sunes Shoe Shop</h1>
+        <h1>BÄSTA SHOP</h1>
         <nav>
           <ul>
             <li>
@@ -24,13 +24,15 @@
     <main>
       <section class="hero"></section>
       <section class="products">
-        <div v-for="item in products" v-bind:key="item.clothingId" > 
-          <img src="@/assets/products/hoodie-blue.jpg"></img>  
-        </div> <!-- huuuuuur -->
+        <div v-for="item in products" v-bind:key="item.clothingId">
+          <h1>hunsaer</h1>
+          <img src="@/assets/products/hoodie-blue.jpg">
+        </div>
+        <!-- huuuuuur -->
       </section>
-
-      <footer>footer</footer>
     </main>
+
+    <section class="footer"></section>
   </div>
 </template>
 
@@ -50,7 +52,7 @@ export default {
     }
   },
   mounted: function() {
-    this.getClothing()
+    this.getClothing();
   }
 };
 </script>
