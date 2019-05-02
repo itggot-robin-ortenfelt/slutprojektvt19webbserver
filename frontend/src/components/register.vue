@@ -1,10 +1,14 @@
 <template>
-  <div class="inlogg">
-    <h1>inlogg</h1>
-    <!-- <form action="/login" method="post"> -->
-      <input name="username" placeholder="username" type="text" v-model="username">
-      <input name="password" placeholder="password" type="password" v-model="password">
+  <div class="register">
+      <h1>
+          register
+      </h1>
+    <!-- <form action="/register" method="post"> -->
+      <input name="regUsername" placeholder="namn" type="text" v-model="regUsername">
+      <input name="regPassword" placeholder="password" type="password" v-model="regPassword">
       <input value="submit" type="submit">
+
+    
     <!-- </form> -->
   </div>
 </template>
@@ -12,17 +16,14 @@
 <script>
 export default {
   data: () => ({
-    username: null,
-    password: null
+    regUsername: null,
+    regPassword: null
   })
 }
 </script>
 
-
 <style lang="scss">
 @import "scss/main.scss";
-
-
 
   div.inlogg {
     position: fixed;

@@ -1,6 +1,7 @@
 <template>
   <div>
     <inlogg v-if="showLogin" />
+    <register v-if="showRegister" />
     <main>
       <section class="trending">
         <div class="shoes">
@@ -16,6 +17,9 @@
               <input type="text">
             </div>
             <aside class="cart">
+              <img src="@/assets/cart.png" alt="Shopping cart">
+            </aside>
+            <aside class="test" @click="showRegister = !showRegister">
               <img src="@/assets/cart.png" alt="Shopping cart">
             </aside>
             <aside class="profile" @click="showLogin = !showLogin">
@@ -101,15 +105,18 @@
 
 <script>
 import inlogg from '@/components/inlogg.vue'
+import register from '@/components/register.vue'
 
 export default {
   name: "app",
   components: {
-    inlogg
+    inlogg,
+    register
   },
   data(){
     return {
-      showLogin: false
+      showLogin: false,
+      showRegister: false
     }
   }
 };
