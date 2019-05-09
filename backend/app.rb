@@ -11,29 +11,39 @@ configure do
 before do
     response.headers['Access-Control-Allow-Origin'] = '*'
   end
-# session[:db] = SQLite3::Database.new('database/database.db')
-# db.results_as_hash = true 
 
+# Creates a global variable of the database
+#  
 def connect()
   db = SQLite3::Database.new('database/database.db')
   db.results_as_hash = true 
   return db
 end
 
+# Display landing page
+# 
 get('/')do
   db = connect()
 content_type :json
 result = db.execute("SELECT * FROM clothing")
-return result.to_json
-    
+return result.to_json  
 end
 
+# Registers a user
+# 
+# @param [string] :username, the users username
+# @param [string] :password, the users password
 post ('/api/register') do 
   db = connect()
   db.execute("INSERT INTO users(username, password,) VALUES(?, ?)",regUsername, regPassword)
   redirect('/')
-end
+end 
 
+# Checks if username and password insterted by user mathces the ones in database
+# 
+# @param [string] :username, the users username
+# @param [string] :password, the users password
+# @param [integer] :userId, the users id
 post ('/api/login') do
   db = connect()
   result = db.execute("SELECT username, password, userId FROM users WHERE users.username = (?)",params[:username])
